@@ -12,6 +12,7 @@ namespace Test.TeqBall.Host.Controllers
     [Route("api/[action]")]
     public class AppointmentController : ControllerBase
     {
+        // todo exception cather
         private readonly ILogger<AppointmentController> _logger;
         private readonly IAppointmentService _appointmentService;
 
@@ -24,13 +25,21 @@ namespace Test.TeqBall.Host.Controllers
         [HttpGet]
         public async Task<GetAllResponse> GetAll()
         {
+
             return await _appointmentService.GetAll();
         }
 
         [HttpPost]
-        public async Task<CreateAppointmentResponse> Create(CreateAppointmentRequest request)
+        public async Task<IActionResult> Create(CreateAppointmentRequest request)
         {
-            return await _appointmentService.Create(request);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.ValidationState);
+            }
+
+            var response = await _appointmentService.Create(request);
+
+            return Ok(response);
         }
     }
 }

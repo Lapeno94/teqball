@@ -25,6 +25,8 @@ namespace Test.TeqBall.Host.Application.Services
             try
             {
                 var appointment = new Appointment(request.Name, request.StartDateTime, request.Length, request.Owner, request.Invitee);
+                // add query
+
                 var entity = await _appointmentRepository.Save(appointment);
 
                 return new CreateAppointmentResponse
@@ -40,7 +42,7 @@ namespace Test.TeqBall.Host.Application.Services
             }
             catch (Exception)
             {
-
+                // todo
                 throw;
             }
         }
@@ -74,7 +76,7 @@ namespace Test.TeqBall.Host.Application.Services
             }
             catch (Exception)
             {
-
+                // todo 
                 throw;
             }
         }
