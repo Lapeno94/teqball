@@ -7,6 +7,8 @@ namespace Test.TeqBall.Host.Domain.Aggregates
 {
     public class Appointment : IAggregateRoot, IEntity
     {
+        public Guid Id { get; set; }
+
         public string Name { get; set; }
 
         public DateTime StartDateTime { get; set; }

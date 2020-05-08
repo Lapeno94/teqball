@@ -4,7 +4,16 @@ using System.Text;
 
 namespace Test.TeqBall.Interfaces.Api.Requests
 {
-    class CreateAppointmentRequest
+    public class CreateAppointmentRequest
     {
+        public string Name { get; set; }
+
+        public DateTime StartDateTime { get; set; }
+
+        public int Length { get; set; }
+
+        public string Owner { get; set; }
+
+        public IEnumerable<string> Invitee { get; set; }
     }
 }

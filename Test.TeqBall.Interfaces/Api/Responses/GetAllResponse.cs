@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Test.TeqBall.Interfaces.Api.Responses
 {
-    class GetAllResponse
+    public class GetAllResponse : List<CreateAppointmentResponse>
     {
     }
 }

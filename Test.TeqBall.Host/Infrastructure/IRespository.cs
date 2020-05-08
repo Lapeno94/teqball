@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Test.TeqBall.Host.Domain
+namespace Test.TeqBall.Host.Infrastructure
 {
-    interface IEntity
+    interface IRespository
     {
-        Guid Id { get; set; }
     }
 }
