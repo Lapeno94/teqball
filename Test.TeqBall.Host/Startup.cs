@@ -32,7 +32,8 @@ namespace Test.TeqBall.Host
         {
             services.AddControllers()
                 // this will be scoped
-                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<AppointmentValidator>());
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<AppointmentValidator>())
+                .AddNewtonsoftJson();
 
             services.AddHealthChecks();
 
@@ -59,7 +60,7 @@ namespace Test.TeqBall.Host
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");
             });
 
             app.UseHttpsRedirection();
