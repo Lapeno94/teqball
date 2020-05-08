@@ -1,11 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Test.TeqBall.Interfaces.Api.Requests;
+using Test.TeqBall.Interfaces.Api.Responses;
 
 namespace Test.TeqBall.Host.Application.Services
 {
-    interface IAppointmentService
+    public interface IAppointmentService
     {
+        Task<CreateAppointmentResponse> Create(CreateAppointmentRequest request);
+
+        Task<GetAllResponse> GetAll();
+
     }
 }

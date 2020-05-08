@@ -7,6 +7,10 @@ namespace Test.TeqBall.Host.Domain
 {
     interface IEntity
     {
-        Guid Id { get; set; }
+        string Id { get; set; }
+
+        public DateTime StartDateTime { get; set; }
+
+        public DateTime EndDateTime { get; set; }
     }
 }

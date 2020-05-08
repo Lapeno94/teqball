@@ -6,9 +6,11 @@ namespace Test.TeqBall.Interfaces.Api.Responses
 {
     public class CreateAppointmentResponse
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         public string Name { get; set; }
+
+        public int Length { get; set; }
 
         public DateTime StartDateTime { get; set; }
 

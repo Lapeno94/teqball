@@ -11,7 +11,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Test.TeqBall.Host.Application.Services;
 using Test.TeqBall.Host.Application.Validators;
+using Test.TeqBall.Host.Infrastructure;
+using Test.TeqBall.Host.Infrastructure.Repositories;
 
 namespace Test.TeqBall.Host
 {
@@ -28,11 +31,17 @@ namespace Test.TeqBall.Host
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers()
+                // this will be scoped
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<AppointmentValidator>());
 
             services.AddHealthChecks();
 
+            services.Configure<ConnectionOptions>(Configuration.GetSection("Connections"));
+
             services.AddSwagger();
+
+            services.AddSingleton<IAppointmentRepository, MongoDbRepository>();
+            services.AddSingleton<IAppointmentService, AppointmentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

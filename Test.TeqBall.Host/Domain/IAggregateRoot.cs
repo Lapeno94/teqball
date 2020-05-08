@@ -9,11 +9,9 @@ namespace Test.TeqBall.Host.Domain
     {
         string Name { get; set; }
 
-        DateTime StartDateTime { get; set; }
-
-        DateTime EndDateTime { get; set; }
-
         string Owner { get; set; }
+
+        int Length { get; set; }
 
         IEnumerable<string> Invitee { get; set; }
     }

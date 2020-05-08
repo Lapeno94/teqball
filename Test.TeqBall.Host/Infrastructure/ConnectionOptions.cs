@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 
 namespace Test.TeqBall.Host.Infrastructure
 {
-    public interface IRespository
+    public class ConnectionOptions
     {
+        public string MongoDbCluster { get; set; }
+
+        public string MongoDatabase { get; set; }
     }
 }
