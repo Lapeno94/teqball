@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.TeqBall.Host", "Test.TeqBall.Host\Test.TeqBall.Host.csproj", "{91FD7B71-3CEA-4D4E-AF4B-37C61ABBAC7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91FD7B71-3CEA-4D4E-AF4B-37C61ABBAC7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91FD7B71-3CEA-4D4E-AF4B-37C61ABBAC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91FD7B71-3CEA-4D4E-AF4B-37C61ABBAC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91FD7B71-3CEA-4D4E-AF4B-37C61ABBAC7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCC13F23-9C93-45B2-9290-05FC44F7D266}
+	EndGlobalSection
+EndGlobal
