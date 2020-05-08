@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 namespace Test.TeqBall.Host.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[action]")]
     public class AppointmentController : ControllerBase
     {
         private readonly ILogger<AppointmentController> _logger;
@@ -16,7 +16,13 @@ namespace Test.TeqBall.Host.Controllers
         }
 
         [HttpGet]
-        public async Task<string> Get()
+        public async Task<string> GetAll()
+        {
+            return await Task.FromResult("asd");
+        }
+
+        [HttpGet]
+        public async Task<string> Create()
         {
             return await Task.FromResult("asd");
         }
