@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Test.TeqBall.Host.Application.Filters;
 using Test.TeqBall.Host.Application.Services;
 using Test.TeqBall.Interfaces.Api.Requests;
