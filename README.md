@@ -14,3 +14,6 @@ Docker inspect for get the ipaddress if it is unbinded to localhost.
 
 ## MongoDB setting
 Create index on StarDateTime and EndDateTime for query optimalization.
+
+## others
+.net core 3.1 / mongo lib does not support the 2.1 standard.
