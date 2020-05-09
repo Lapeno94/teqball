@@ -2,7 +2,7 @@
 
 ## Run
 Mongodb instance in docker. https://hub.docker.com/_/mongo
-Appsettings.json add the connection url of the cluster and the database name. 
+appsettings.json add the connection url of the cluster and the database name. 
 
 ```
       "Connections": {
