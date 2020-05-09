@@ -17,10 +17,14 @@ namespace Test.TeqBall.Host.Application.Filters
         public void OnException(ExceptionContext context)
         {
             context.HttpContext.Response.StatusCode = 500;
-            context.Result = new ObjectResult(context)
+            context.Result = new ObjectResult(context.Exception.Message)
             {
                 StatusCode = StatusCodes.Status500InternalServerError,
-                Value = context.RouteData
+                Value = new
+                {
+                    context.RouteData,
+                    context.Exception.Message
+                }
             };
             context.ExceptionHandled = true;
 

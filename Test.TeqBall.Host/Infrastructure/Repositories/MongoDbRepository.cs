@@ -40,7 +40,7 @@ namespace Test.TeqBall.Host.Infrastructure.Repositories
         {
             try
             {
-                var filter = Builders<Appointment>.Filter.And(Builders<Appointment>.Filter.Lt("StartDateTime", appointment.StartDateTime), Builders<Appointment>.Filter.Gt("EndDateTime", appointment.EndDateTime));
+                var filter = Builders<Appointment>.Filter.And(Builders<Appointment>.Filter.Lt("StartDateTime", appointment.EndDateTime), Builders<Appointment>.Filter.Gt("EndDateTime", appointment.StartDateTime));
                 var appointments = await _collection.Find(filter).ToListAsync();
                 return appointments;
             }
