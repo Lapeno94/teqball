@@ -8,9 +8,9 @@ namespace Test.TeqBall.Interfaces
     {
         public struct Appointment
         {
-            public static string Create = "/asd";
+            public static string Create = "/api/Create";
 
-            public static string GetAll = "/asd";
+            public static string GetAll = "/api/GetAll";
         }
     }
 }
